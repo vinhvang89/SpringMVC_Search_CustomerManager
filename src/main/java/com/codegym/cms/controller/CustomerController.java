@@ -33,7 +33,7 @@ public class CustomerController {
         modelAndView.addObject("message", "New customer created successfully");
         return modelAndView;
     }
-    @GetMapping("/customers")
+    @GetMapping("/")
     public ModelAndView listCustomers(){
         List<Customer> customers = customerService.findAll();
         ModelAndView modelAndView = new ModelAndView("/customer/list");
